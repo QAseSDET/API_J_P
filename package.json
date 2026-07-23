@@ -1,0 +1,15 @@
+{
+  "name": "API_J_P",
+  "version": "1.0.0",
+  "description": "Prctising API Automation using Postman, Newman and Jenkins",
+  "author": "Himanshu Sharma",
+  "license": "ISC",
+  "scripts": {
+    "test": "newman run Collections/JP_hindi.postman_collection.json -e Environments/JP_Trello_Hindi.postman_environment.json",
+    "report": "newman run Collections/JP_hindi.postman_collection.json -e Environments/JP_Trello_Hindi.postman_environment.json -r cli,htmlextra --reporter-htmlextra-export Reports/report.html"
+  },
+  "devDependencies": {
+    "newman": "^6.2.1",
+    "newman-reporter-htmlextra": "^1.23.1"
+  }
+}
